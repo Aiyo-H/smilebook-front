@@ -1,5 +1,5 @@
 <template>
-    <Header :myPage="true"/>
+    <Header />
     <div v-if="recipe && recipe.author" class="recipe-detail">
       <h1>{{ recipe.name }}</h1>
       <img :src="recipe.cover_url" alt="Cover Image" class="recipe-cover">
@@ -13,6 +13,7 @@
       <p><strong>Description:</strong> {{ recipe.description }}</p>
       <p><strong>Servings:</strong> {{ recipe.num_of_servings }}</p>
       <p><strong>Cook Time:</strong> {{ recipe.cook_time }} minutes</p>
+      <p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
       <p><strong>Directions:</strong> {{ recipe.directions }}</p>
       <!-- Add more details as needed -->
     </div>
